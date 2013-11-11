@@ -1,0 +1,32 @@
+fat2bitmap
+==========
+Creates a bitmap from FAT file system (free/used clusters).
+
+To compile:
+make
+
+To compile without signal handling:
+make CFLAGS='-DNOSIGNAL'
+
+To run:
+./bin/fat2bitmap
+
+To clean:
+make clean
+
+To print progress:
+kill -SIGUSR1 pid
+
+Usage: fat2bitmap [options]
+
+Options:
+  --if FILE    Input file
+  --of FILE    Output file (default: stdout)
+  --help       Usage information
+  --version    Print version
+	
+Example: fat2bitmap --if filesys.iso --of map.txt
+
+Written by Andras Majdan
+License: GNU General Public License Version 3
+Report bugs to <majdan.andras@gmail.com>
