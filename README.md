@@ -6,6 +6,7 @@ For example creating a usage map of FAT file system (from filesys.iso image file
 ```fat2bitmap --if filesys.iso --of usagemap.txt```
 
 usagemap.txt will contain text:
+
 1110111100001100110 .. and so on.
 
 ## Usage
@@ -30,11 +31,14 @@ You can get progress information by sending a SIGUSR1 signal to the process:
 
 ### Example 1
 Make cluster map of /dev/sda1 partition (FAT):
+
 ```fat2bitmap --if /dev/sda1 --of mapsda1.txt```
 
 ### Example 2
 Make cluster map of /dev/sdb3 partition (FAT) and create a PBM image of it:
+
 ``` fat2bitmap --if /dev/sdb3 | bitmapdd --bs 1 --null 48 | bitmap2pbm --of mapsdb3.pbm ```
+
 For these tools check the "See also" section.
 
 ## Build
